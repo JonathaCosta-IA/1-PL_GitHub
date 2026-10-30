@@ -1,5 +1,7 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include<string.h>
+
 // Teste de pertinência
 int pertence(int numero, int lista[], int tamanho) {
 /* Procura o número na lista elemento-a-elemento
@@ -15,7 +17,7 @@ int pertence(int numero, int lista[], int tamanho) {
 
 // Mensagem inicial
 
-void MensagemInicial(){
+void MensagemInicial(void){
     printf(
             "\n"
             "-------------------------------------------------------\n"
@@ -27,7 +29,7 @@ void MensagemInicial(){
             "   Ao final, será classificado e exibido o temperamento dominante do usuário.\n"
             "   O teste está baseado no livro de Minate, 2019.\n"
             "   Os temperamentos listados no livro são:\n\n"
-            "\t()Colérico\t()Sanguineo\t()Fleumático\t()Melancólico."
+            "\t( ) Colérico\t( ) Sanguineo\t( ) Fleumático\t( ) Melancólico."
             "\n\nIdentifique o seu a partir do teste a seguir!"
             "\n\n"
             );
@@ -71,13 +73,13 @@ char *perguntas[32] =
     };
 
 
-void TesteTemperamento()
+void TesteTemperamento(void)
 {
          // Gabarito das respostas por temperamento conforme autor do livro referenciado
-        int colerico_lista[12]   = {4,6,7,8,9,10,11,13,14,16,17,27};
-        int sanguineo_lista[12]  = {4,7,9,10,11,12,16,21,24,25,27,29};
-        int melancolico_lista[12]= {1,2,3,5,6,8,15,18,19,26,31,32};
-        int fleumatico_lista[12] = {5,15,18,19,20,22,23,25,28,29,30,32};
+        int colerico_lista[12]    = {4,6,7,8,9,10,11,13,14,16,17,27};
+        int sanguineo_lista[12]   = {4,7,9,10,11,12,16,21,24,25,27,29};
+        int melancolico_lista[12] = {1,2,3,5,6,8,15,18,19,26,31,32};
+        int fleumatico_lista[12]  = {5,15,18,19,20,22,23,25,28,29,30,32};
 
          // Variáveis de controle do teste
         int ponto_colerico = 0, ponto_sanguineo = 0, ponto_melancolico = 0, ponto_fleumatico = 0;
